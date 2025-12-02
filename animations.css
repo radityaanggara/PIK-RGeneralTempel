@@ -1,0 +1,218 @@
+/* ============================================================
+   ANIMATIONS.CSS — PIK-R General Kapanewon Tempel
+   Koleksi animasi lengkap untuk UI, komponen, dan AOS-mini
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   AOS BASE (Default Animation State)
+   ------------------------------------------------------------ */
+[data-aos] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    transition-duration: 0.8s;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ------------------------------------------------------------
+   AOS VARIANTS (Preset Animations)
+   ------------------------------------------------------------ */
+[data-aos="fade-up"] {
+    transform: translateY(30px);
+}
+[data-aos="fade-down"] {
+    transform: translateY(-30px);
+}
+[data-aos="fade-left"] {
+    transform: translateX(40px);
+}
+[data-aos="fade-right"] {
+    transform: translateX(-40px);
+}
+
+[data-aos="zoom-in"] {
+    transform: scale(0.85);
+}
+[data-aos="zoom-out"] {
+    transform: scale(1.15);
+}
+
+[data-aos="flip-up"] {
+    transform-origin: bottom;
+    transform: rotateX(80deg);
+}
+[data-aos="flip-down"] {
+    transform-origin: top;
+    transform: rotateX(-80deg);
+}
+
+/* ------------------------------------------------------------
+   Hover Animations — For Buttons & Cards
+   ------------------------------------------------------------ */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+    transition: 0.3s ease;
+}
+
+/* Image hover zoom */
+.img-zoom {
+    overflow: hidden;
+    display: block;
+}
+.img-zoom img {
+    transition: transform 0.5s ease;
+}
+.img-zoom:hover img {
+    transform: scale(1.08);
+}
+
+/* ------------------------------------------------------------
+   Hero Section Animations
+   ------------------------------------------------------------ */
+.hero-title {
+    animation: heroSlideUp 1s ease-out forwards;
+    opacity: 0;
+}
+.hero-subtitle {
+    animation: heroFadeIn 1.3s ease-out forwards;
+    opacity: 0;
+}
+.hero-button {
+    animation: heroPop 1.4s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes heroSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes heroPop {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ------------------------------------------------------------
+   Smooth Fade & Pop Utilities
+   ------------------------------------------------------------ */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.pop-in {
+    animation: popIn 0.7s ease forwards;
+}
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.7); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* ------------------------------------------------------------
+   Blur & Parallax Utilities
+   ------------------------------------------------------------ */
+
+/* Blur In */
+.blur-in {
+    animation: blurIn 1s ease forwards;
+}
+
+@keyframes blurIn {
+    from {
+        opacity: 0;
+        filter: blur(8px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/* Parallax (for background images) */
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ------------------------------------------------------------
+   Loading / Preloader Animation (Optional)
+   ------------------------------------------------------------ */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.preloader {
+    width: 48px;
+    height: 48px;
+    border: 4px solid #ddd;
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: auto;
+}
+
+/* ------------------------------------------------------------
+   Animated Underline Link
+   ------------------------------------------------------------ */
+.link-underline {
+    position: relative;
+    display: inline-block;
+}
+.link-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+.link-underline:hover::after {
+    width: 100%;
+}
+
+/* ------------------------------------------------------------
+   Delay Helpers
+   ------------------------------------------------------------ */
+.delay-1 { transition-delay: 0.1s !important; }
+.delay-2 { transition-delay: 0.2s !important; }
+.delay-3 { transition-delay: 0.3s !important; }
+.delay-4 { transition-delay: 0.4s !important; }
+

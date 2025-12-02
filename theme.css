@@ -1,0 +1,112 @@
+/* theme.css continuation */
+
+:root {
+  --primary-color: #4f46e5;
+  --secondary-color: #6366f1;
+  --accent-color: #fbbf24;
+  --dark-color: #111827;
+  --light-color: #f9fafb;
+  --text-color: #1f2937;
+
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+body {
+  background: var(--light-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--secondary-color);
+}
+
+/* Cards */
+.card-theme {
+  background: #fff;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.card-theme:hover {
+  transform: translateY(-3px);
+}
+
+
+/* ===================== */
+/* NAVBAR THEME COLORS   */
+/* ===================== */
+.navbar {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 15px 0;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.navbar a:hover {
+  color: var(--color-accent);
+}
+
+/* ===================== */
+/* FOOTER THEME          */
+/* ===================== */
+.footer {
+  background-color: var(--color-dark);
+  color: #eee;
+  padding: 40px 0;
+  text-align: center;
+}
+.footer a {
+  color: var(--color-accent);
+}
+.footer a:hover {
+  opacity: 0.8;
+}
+
+/* ===================== */
+/* DARK MODE ENHANCEMENT */
+/* ===================== */
+.dark-mode .navbar {
+  background-color: #222;
+}
+.dark-mode .footer {
+  background-color: #111;
+  color: #ccc;
+}
+.dark-mode body {
+  background-color: var(--color-dark);
+  color: #ddd;
+}
+
+/* ===================== */
+/* TYPOGRAPHY STYLES     */
+/* ===================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: var(--color-dark);
+}
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
