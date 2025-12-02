@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konseling Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">PIK-R General Tempel</div>
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Tentang</a>
+        <a href="program.html">Program</a>
+        <a href="artikel.html">Artikel</a>
+        <a href="gallery.html">Galeri</a>
+        <a href="contact.html" class="btn-primary active">Konseling</a>
+    </nav>
+</header>
+
+<section class="section">
+    <h2>Konseling Online</h2>
+
+    <form action="backend/save_konseling.php" method="POST" class="form-box">
+        <input type="text" name="nama" placeholder="Nama Lengkap" required>
+        <input type="number" name="umur" placeholder="Umur" required>
+        <input type="text" name="kontak" placeholder="Kontak (HP/Email)">
+        <textarea name="masalah" placeholder="Ceritakan masalah Anda..." required></textarea>
+
+        <button class="btn-primary">Kirim</button>
+    </form>
+</section>
+
+</body>
+</html>
